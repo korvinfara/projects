@@ -3,9 +3,9 @@
 :root {
 	--accent: #CC8869;
 	--text: #333;
-	--regular-text: 16px;
+	--regular-text: 20px;
 	--lineheight: 1.65;
-	--userfont: roboto-st, sans-serif;
+	--userfont: AmaticSC-Regular, sans-serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 	--padding: 120px;
 	--transition: cubic-bezier(.4, 0, 0, 1);
@@ -23,7 +23,7 @@
 @font-face { src: url("../fonts/roboto-italic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: italic; }
 @font-face { src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: normal; }
 @font-face { src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: italic; }
-@font-face { src: url("../fonts/assassin.woff2") format("woff2"); font-family: "assassin-st"; font-weight: 700; font-style: italic; }
+@font-face { src: url("../fonts/AmaticSC-Regular.ttf") format("woff2"); font-family: "AmaticSC-Regular"; font-weight: 700; font-style: italic; }
 
 /* GENERAL CSS SETTINGS */
 
@@ -110,7 +110,7 @@ body, html {
 	width: 100%;
 	top: 40px;
 	font-family: var(--userfont);
-	font-size: 32px;
+	font-size: 50px;
 	color: rgba(255, 255, 255, .75);
 }
 .showcase__header span {
@@ -143,7 +143,7 @@ body, html {
 	bottom: -85px;
 	width: 100%;
 	font-family: var(--userfont);
-	font-size: 25px;
+	font-size: 40px;
 	color: rgba(255, 255, 255, .5);
 	text-shadow: rgb(58 78 94) 0 0 10px;
 }
@@ -286,6 +286,9 @@ body, html {
 }
 .project_content .porsche {
 	list-style-image: url(../images/porsche-small-icon.svg);
+	vertical-align: top;
+	margin: 0 30px;
+	max-width: 45%;
 }
 .project_content .severstal {
 	list-style-image: url(../images/severstal-small-icon.svg);
@@ -308,4 +311,18 @@ body, html {
 		padding: 6vw;
 		overflow-y: auto;
 	}
+}
+
+.button_back {
+	transform: translateX(-50%);
+	text-decoration: none;
+	position: absolute;
+	color: var(--accent);
+	transition: all 250ms;
+	top: -75px;
+	left: 50%;
+}
+.button_back:hover {
+	color: var(--accent);
+	opacity: .7;
 }
